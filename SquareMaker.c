@@ -3,14 +3,14 @@ Author: LilWons
 Date: 2024-01-11
 Version: 1
 
-Description: Gets inputs N amd M from user and resturns the series of squares that can be made out of a piece of paper with NxM dimentions. 
+Description: Gets inputs N and M from the user and returns the series of squares that can be made out of a piece of paper with NxM dimensions. 
 No fractional squares are allowed and no square can be less than 1 in length and width.  
 */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-//Global variable to flag the first square. 
+//Global variable to flag the first square.
 int firstSquare;
 
 /*
@@ -22,8 +22,8 @@ void BadInput(){
     while (getchar() != '\n');
 }
 /*
-GetDimN: Gets and returns N input from user.
-Checkes each input is a positive integer. 
+GetDimN: Gets and returns N input from the user.
+Check each input is a positive integer. 
 */
 int GetDimN(void){
     int N; 
@@ -37,8 +37,8 @@ int GetDimN(void){
     return N;
 }
 /*
-GetDimM: Gets and returns M input from user.
-Checkes each input is a positive integer. 
+GetDimM: Gets and returns M input from the user.
+Check each input is a positive integer. 
 */
 int GetDimM(void){
     int M; 
@@ -61,7 +61,7 @@ void PrintSquare(int square){
     firstSquare = 0;
 }
 /*
-GetSquares: Finds and prints the largest square able to be made with avaiable dimensions. 
+GetSquares: Finds and prints the largest square able to be made with available dimensions. 
 */
 void GetSquares(int *dimN, int *dimM){
     if(*dimN > *dimM){
@@ -74,8 +74,8 @@ void GetSquares(int *dimN, int *dimM){
    }
 }
 /*
-main: Checks to make sure squares can be made with provided dimensions.
-Continues making squares until no more squares are able to be made with aviable dimensions.
+main: Check to ensure squares can be made with the provided dimensions.
+Continues making squares until no more squares can be made with available dimensions.
 */
 int main(){
     int M, N;
